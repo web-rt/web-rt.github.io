@@ -1,21 +1,109 @@
-.files-wrap{
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+body.blob-editor-page{
+  /*background-color: #C1E6C6;*/
+}
+a {
+    color: #4078c0;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover{
+  text-decoration: underline;
+}
+.files-body-content{
   position: relative;
   width: 700px;
   margin: 0 auto;
+  margin-top: 100px;
+}
+.files-body-content>.user-info{
+  margin-bottom: 10px;
+  font-size: 19px;
+  padding-left: 15px;
+}
+.files-wrap{
+  position: relative;
+  border: 1px solid #ddd;
+  border-bottom: 0;
 }
 .files-wrap>.cur-path{
-  
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+.files-wrap>.cur-path .path-val{
+  float: left;
+}
+.files-wrap>.cur-path .path-actions{
+  float: right;
+}
+.upload-file-btn{
+  margin-right: 8px;
+}
+.upload-file-btn path{
+  fill: #767676;
+}
+.new-file-btn path{
+  fill: #767676;
 }
 ul.file-list{
-  
+  padding: 0;
+  margin: 0;
 }
 ul.file-list>li{
   position: relative;
   display: block;
   padding: 10px 15px;
-  margin-bottom: -1px;
   background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+ul.file-list>li:hover{
+  background-color: #f5f5f5;
+}
+
+/** editor  **/
+.edit-wrap{
+  width: 920px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 100px;
+}
+.edit-wrap>.head{
+  overflow: hidden;
+}
+.edit-wrap .blob-path{
+  float: left;
+}
+.edit-wrap .blob-path>input{
+    min-height: 28px;
+    padding: 2px 4px;
+    line-height: 24px;
+    color: #333;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.075);
+}
+.edit-wrap .blob-path>input:focus {
+    border-color: #51a7e8;
+    outline: none;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.075), 0px 0px 5px rgba(81,167,232,0.5);
+}
+
+
+.edit-wrap .edit-action{
+  float: right;
+}
+.edit-wrap>.head-line{
+  border-bottom: 1px solid #D3D3D3;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+.blob-editor-wrap{
   border: 1px solid #ddd;
-  border-width: 1px 0;
-  border-top-width: 0;
+  border-radius: 3px;
+  padding: 10px;
 }
