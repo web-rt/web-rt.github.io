@@ -1,0 +1,21 @@
+.files-wrap{
+  position: relative;
+  width: 700px;
+  margin: 0 auto;
+}
+.files-wrap>.cur-path{
+  
+}
+ul.file-list{
+  
+}
+ul.file-list>li{
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-width: 1px 0;
+  border-top-width: 0;
+}
