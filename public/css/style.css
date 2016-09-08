@@ -1,5 +1,5 @@
 body{
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, tahoma, arial, simsun, 宋体;
 }
 body.blob-editor-page{
   /*background-color: #C1E6C6;*/
@@ -64,46 +64,119 @@ ul.file-list>li:hover{
 }
 
 /** editor  **/
-.edit-wrap{
-  width: 920px;
+.edit-layer-wrap{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.edit-layer-bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f1f1f1;
+}
+.edit-layer-content{
+  width: 520px;
   margin: 0 auto;
   position: relative;
   margin-top: 100px;
+  box-shadow: 0 0 10px #ccc;
 }
-.edit-wrap>.head{
+.edit-layer-content>.head{
   overflow: hidden;
+  background-color: #fff;
+
+  position: relative;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #dfdfdf;
+    border-top:0;
+    padding-left: 10px;
 }
-.edit-wrap .blob-path{
+.edit-layer-content .blob-path{
   float: left;
 }
-.edit-wrap .blob-path>input{
-    min-height: 28px;
-    padding: 2px 4px;
-    line-height: 24px;
+.edit-layer-content .blob-path .repo-name{
+
+  color: #999;
+  display: inline-block;
+  padding: 5px 0;
+  height: 20px;
+    line-height: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.edit-layer-content .blob-path input{
+    position: relative;
+    
+    width: 178px;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 10px;
+    padding-left: 0;
+    margin: 0;
     color: #333;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
     outline: none;
-    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.075);
 }
-.edit-wrap .blob-path>input:focus {
-    border-color: #51a7e8;
+.edit-layer-content .blob-path input:focus {
     outline: none;
-    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.075), 0px 0px 5px rgba(81,167,232,0.5);
+    /*box-shadow: inset 0px 1px 2px rgba(0,0,0,0.075), 0px 0px 5px rgba(81,167,232,0.5);*/
 }
 
 
-.edit-wrap .edit-action{
+.edit-layer-content .edit-action{
   float: right;
 }
-.edit-wrap>.head-line{
-  border-bottom: 1px solid #D3D3D3;
-  margin-top: 8px;
-  margin-bottom: 18px;
+.edit-action button{  
+  background-color: transparent;
+  outline: none;
+  padding: 0 5px;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  margin-right: 14px;
+  border-radius: 2px;
+  letter-spacing: 3px;
+}
+.edit-action button.save{
+  background-color: #5cb85c;
+  border: 1px solid #4cae4c;
+  color: #fff;
+  padding: 0 15px;
+}
+.edit-action button.save:hover{
+  background-color: #3F903F
+}
+.edit-action button.cancel{
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0 5px;
+}
+.edit-action button.cancel:hover{
+  background-color: #E6E6E6;
+}
+.edit-action button.more{
+  color: #90939a;
+  letter-spacing: 3px;
+  border: 0;
+}
+.edit-action button.more:hover{
+  color: #707276;
+}
+
+.edit-layer-content>.head-line{
+  border-bottom: 0px solid #D3D3D3;
 }
 .blob-editor-wrap{
-  border: 1px solid #ddd;
-  border-radius: 3px;
+  border: 1px solid #dfdfdf;
   padding: 10px;
+  background-color: #fff;
 }

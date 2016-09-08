@@ -8,17 +8,31 @@
  </head> 
  <body class="blob-editor-page"> 
    
-   <div class="edit-wrap">
-    <div class="head">
-      <div class="blob-path">
-        <span></span>web-rt / <input value="github / lib / Search.js" type="text">
-      </div>
-      <div class="edit-action">保存  取消</div>
+   <div class="edit-layer-wrap">
+    <div class="edit-layer-bg"></div>
+    <div class="edit-layer-contentx">
+
     </div>
-    <div class="head-line"></div>
+   </div>
+
+
+   <div class="edit-layer-content">
+    
     <div class="blob-editor-wrap">
       <div id="blob-editor"></div>
-    </div>    
+    </div>  
+    <div class="head">
+      <div class="blob-path">
+        <div style="float:left">
+        <span class="repo-name">web-rt / </span><input value="github / lib / Search.js" type="text">
+        </div>
+      </div>
+      <div class="edit-action">
+        <button class="cancel">取消</button>
+        <button class="save">保存</button>
+        <button class="more">···</button>
+      </div>
+    </div>  
    </div>
    
    <script src="public/lib/jquery-3.1.0.min.js"></script>

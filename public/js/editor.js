@@ -15,6 +15,6 @@ $(function(){
     showPrintMargin: false,
     theme: 'ace/theme/github',
     minLines: 24,
-    maxLines: 50
+    maxLines: 40
   });
 })
